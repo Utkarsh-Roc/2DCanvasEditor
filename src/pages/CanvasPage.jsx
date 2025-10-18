@@ -9,7 +9,7 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 import * as fabric from "fabric";
 
 // Auto-save interval (1 min / 60sec)
-const AUTO_SAVE_INTERVAL = 600000;
+const AUTO_SAVE_INTERVAL = 60000;
 
 const CanvasPage = () => {
   const { canvasId } = useParams();

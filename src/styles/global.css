@@ -1649,6 +1649,59 @@ button {
   grid-column: 2;
 }
 
+/* ==================== PANEL CLOSE BUTTONS (Layers & Properties) ==================== */
+
+/* Base styles for panel close buttons in layers and properties */
+.panel-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.panel-close-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.15);
+}
+
+.panel-close-btn:active {
+  transform: scale(0.95);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.side-panel.open .panel-close-btn {
+  animation: panelCloseButtonFadeIn 0.3s ease 0.2s both;
+}
+
+@keyframes panelCloseButtonFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.layers-header,
+.properties-header {
+  gap: 12px;
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 
 /* Desktop Large (1400px+) */
@@ -1853,6 +1906,17 @@ button {
   .panel-toggle-btn {
     display: none;
   }
+  .panel-close-btn {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 1.2rem;
+  }
+  
+  .layers-header,
+  .properties-header {
+    gap: 8px;
+  }
 }
 
 /* Mobile (480px - 767px) */
@@ -1996,6 +2060,12 @@ button {
 
   .panel-toggle-btn {
     display: none;
+  }
+  .panel-close-btn {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    font-size: 1.1rem;
   }
 }
 
