@@ -155,4 +155,8 @@ This project was created as part of a technical assessment.
 
 ---
 
+<<<<<<< HEAD
 **Built with ❤️ by Utkarsh Lotiya**
+=======
+**Built with ❤️ by Utkarsh Lotiya**
+>>>>>>> a7723116ff671b40ee3b88cbbe6c070eee9a0f20
